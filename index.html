@@ -1,0 +1,102 @@
+<html>
+    <head>
+<title>My Love for the Piano</title>
+<link rel="stylesheet" href="styles.css">
+<a href="/Users/lukehoward/Desktop/FINALWEB/index.html">This is my Professional page</a>
+     </head>
+    <body>
+        <!-- This is a comment --> 
+        <h1 id="top" style="text-align: center;">My Love for the Piano</h1>
+        <h5></h5>
+        <!-- <a href="about.html">About Me</a> <br> -->
+        <a href="#bottom">Jump to bottom</a> 
+       
+    <!-- <a href="index2.html">Professional Page</a> -->
+<!-- <span class="rizz"> This is just some floating, plain, text</span> -->
+     
+        <center>
+        <img src="https://t4.ftcdn.net/jpg/04/01/06/01/360_F_401060188_T1xeQIk9LyESpxIi0aRZlqdlPcn9iTS2.jpg" alt="Piano Keys" width="40%">
+        &nbsp;
+<img src="https://lvlmusicacademy.com/wp-content/uploads/2019/01/Steinway__Sons_concert_grand_piano.png" alt="A Grand Piano" width="40%">
+        <br><br> </center>
+    <a href="https://www.youtube.com/watch?v=cmzZLmQb3xs" target="_blank">My Favorite Piano Song!</a>
+    <ol>
+        <li>How it all started</li>
+           <ul>
+            <li>My mother would put on Mariah Carey songs when I was teething; which lead to me liking music</li>
+            <li>We had a piano in the house</li>
+            <li>My family members all had piano lessons and it made me jealous.  So, I used that as motivation to play even more.</li>
+           </ul>
+        <li>Making My Way Up</li>
+            <ul>
+             <li>not a lot</li>
+            </ul>
+        <li>Favs</li>
+            <ul>
+             <li>candy</li>
+            </ul>
+    </ol>
+
+    <div class='tableauPlaceholder' id='viz1734489663533' style='position: relative'><noscript><a href='#'><img alt='Budget ControllingCockpit ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TH&#47;THINGFORFINAL&#47;Home&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='THINGFORFINAL&#47;Home' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TH&#47;THINGFORFINAL&#47;Home&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1734489663533');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1666px';vizElement.style.height='895px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+ 
+    <div id="game">
+        <p>Guess a number between 1 and 10:</p>
+        <input type="number" id="guess" min="1" max="10" />
+        <button onclick="makeGuess()">Submit</button>
+        <p id="message"></p>
+        <button id="retry" onclick="startGame()" style="display: none;">Try Again</button>
+      </div>
+      
+      <script>
+        let secretNumber, attempts;
+      
+        function startGame() {
+          secretNumber = Math.floor(Math.random() * 10) + 1; // Generate random number between 1 and 10
+          attempts = 3; // Set number of attempts
+      
+          document.getElementById('message').textContent = '';
+          document.getElementById('guess').value = '';
+          document.getElementById('guess').style.display = 'inline';
+          document.querySelector("button[onclick='makeGuess()']").style.display = 'inline';
+          document.getElementById('retry').style.display = 'none';
+        }
+      
+        function makeGuess() {
+          const guess = Number(document.getElementById('guess').value);
+      
+          if (!guess || guess < 1 || guess > 10) {
+            document.getElementById('message').textContent = 'Please enter a valid number between 1 and 10.';
+            return;
+          }
+      
+          attempts--;
+      
+          if (guess === secretNumber) {
+            document.getElementById('message').textContent = 'Congratulations! You guessed the number!';
+            endGame();
+          } else if (attempts === 0) {
+            document.getElementById('message').textContent = `You lost! The number was ${secretNumber}.`;
+            endGame();
+          } else {
+            document.getElementById('message').textContent = guess < secretNumber ? 'Higher!' : 'Lower!';
+          }
+        }
+      
+        function endGame() {
+          document.getElementById('guess').style.display = 'none';
+          document.querySelector("button[onclick='makeGuess()']").style.display = 'none';
+          document.getElementById('retry').style.display = 'inline';
+        }
+      
+        // Initialize the game when the page loads
+        startGame();
+      </script>
+      
+    
+    <!-- <p class="pbold">Look mom I'm at the bottom!</p> -->
+    <p id="bottom"></p>
+   <a href="#top">Back to top</a>
+    </body>
+
+
+</html>

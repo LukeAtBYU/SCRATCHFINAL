@@ -1,0 +1,78 @@
+body{
+    font-family:'Comic Sans MS', serif;
+    color: black;
+    background-color: sandybrown;
+}
+.pbold{
+    font-weight: bold;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.rizz{
+    display: block;
+    border: 2px solid lime;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    font-size: 250%;
+    font-family: chiller, papyrus;
+    font-weight: bolder;
+}
+/* .rizz:hover{ */
+    font-size: 500%;
+    color: coral;
+    border: 5px fuchsia dashed;
+}
+a:visited{
+    color: blue;
+}
+img{
+    /* border: red solid; */
+    padding: 5px;
+    margin: 5px;
+    width: 500px;
+
+    
+}
+/* ul:hover{ */
+text-decoration: underline;
+background-color: darkcyan;
+}
+a:hover{
+    text-decoration: overline;
+}
+.common{
+   position:absolute;
+    padding: 5px;
+    margin: 5px;
+    
+}
+.bottom{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    font-style: italic;
+    background-color: darkcyan;
+    font-size: 50%;
+}
+.top{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+.content{
+    top: 150px;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+}
+.nav{
+    z-index: 1;
+    position: relative;
+    float: right;
+}
